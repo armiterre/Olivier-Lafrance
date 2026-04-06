@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050508;
+  --color-textPrimary: #e6edf3;
+  --color-accent: #00d8ff;
+  --font-main: "Inter", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-textPrimary);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  a, button {
+    cursor: none;
+  }
+}
+
+/* Forcefully hide scrollbars on all elements */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
